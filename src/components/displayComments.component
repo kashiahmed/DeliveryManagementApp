@@ -1,0 +1,7 @@
+<apex:component controller="displayComments">
+<apex:form >
+<apex:outputPanel rendered="{!if(len(FileId)!=0,true,false)}">
+<apex:image url="/servlet/servlet.FileDownload?file={!FileId}" style="max-width:280px;" />
+</apex:outputPanel>
+</apex:form>
+</apex:component>

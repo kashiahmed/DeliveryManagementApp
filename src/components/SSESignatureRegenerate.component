@@ -1,0 +1,35 @@
+<apex:component controller="SSESignatureRegenerate">
+    <apex:attribute name="objAPIName" assignTo="{!objAPIName}" required="true" type="String" description="Obj API Name. Include __c for custom objects"/>
+    <apex:attribute name="PrintedFieldAPIName" assignTo="{!PrintedFieldAPIName}" required="true" type="String" description="The API Name of the Field to Store the Printed Signature. This Should be a standard Text Field. Include __c for custom objects"/>
+    <apex:attribute name="SignatureFieldAPIName" assignTo="{!SignatureFieldAPIName}" required="true" type="String" description="The API Name of the Field to Store the Signature Data. This Should be a standard Long Text Field (as Long as Possible). Include __c for custom objects"/>
+    <apex:attribute name="objId" assignTo="{!objId}" required="true" type="String" description="The Object Id"/>
+    <apex:includeScript value="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"/>
+    <script src="{!URLFOR($Resource.SSESignatureCapture, '/thomasjbradley-signature-pad-9489484/build/jquery.signaturepad.min.js')}"></script>
+    <script src="{!URLFOR($Resource.SSESignatureCapture, '/thomasjbradley-signature-pad-9489484/build/json2.min.js')}"></script>
+    <script>
+        $j = jQuery.noConflict();
+        
+        $j(document).ready(function() {
+            var sig = {!RawSignature};
+            console.log(sig);
+            $j('.sigPad').signaturePad({displayOnly:true, penColour:'#000000'}).regenerate(sig);
+        });
+    </script>
+    <style>
+    
+        canvas {
+            border: 1px solid #eaeaea;
+            background: #FFF;
+        }
+        
+        .sigWrapper {
+            border: 1px solid #eaeaea;
+            width: 280px;
+        }
+    </style>    
+    <div class="sigPad signed">
+        <div class="sigWrapper">
+            <canvas class="pad" width="280" height="120"></canvas>
+        </div>
+    </div>
+</apex:component>

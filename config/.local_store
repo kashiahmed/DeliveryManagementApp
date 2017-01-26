@@ -27,6 +27,34 @@
         "type": "StaticResource",
         "mmState": "clean"
     },
+    "displayComments.component": {
+        "createdById": "00541000001zeHmAAI",
+        "createdByName": "Kashi DeliveryMgr",
+        "createdDate": "2017-01-12T00:59:30.000Z",
+        "fileName": "unpackaged/components/displayComments.component",
+        "fullName": "displayComments",
+        "id": "09941000000oSJEAA2",
+        "lastModifiedById": "00541000001zeHmAAI",
+        "lastModifiedByName": "Kashi DeliveryMgr",
+        "lastModifiedDate": "2017-01-12T00:59:36.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexComponent",
+        "mmState": "clean"
+    },
+    "SSESignatureRegenerate.component": {
+        "createdById": "00541000001zeHmAAI",
+        "createdByName": "Kashi DeliveryMgr",
+        "createdDate": "2017-01-12T00:59:30.000Z",
+        "fileName": "unpackaged/components/SSESignatureRegenerate.component",
+        "fullName": "SSESignatureRegenerate",
+        "id": "09941000000oSJDAA2",
+        "lastModifiedById": "00541000001zeHmAAI",
+        "lastModifiedByName": "Kashi DeliveryMgr",
+        "lastModifiedDate": "2017-01-12T00:59:36.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexComponent",
+        "mmState": "clean"
+    },
     "displaycomments.page": {
         "createdById": "00541000001zeHmAAI",
         "createdByName": "Kashi DeliveryMgr",
@@ -207,20 +235,6 @@
         "lastModifiedDate": "2017-01-23T17:32:25.000Z",
         "manageableState": "unmanaged",
         "type": "Flow",
-        "mmState": "clean"
-    },
-    "Delivery_Status_Update.flowDefinition": {
-        "createdById": "00541000001zeHmAAI",
-        "createdByName": "Kashi DeliveryMgr",
-        "createdDate": "2017-01-23T17:27:37.000Z",
-        "fileName": "unpackaged/flowDefinitions/Delivery_Status_Update.flowDefinition",
-        "fullName": "Delivery_Status_Update",
-        "id": "300410000006RI5AAM",
-        "lastModifiedById": "00541000001zeHmAAI",
-        "lastModifiedByName": "Kashi DeliveryMgr",
-        "lastModifiedDate": "2017-01-23T17:32:25.000Z",
-        "manageableState": "unmanaged",
-        "type": "FlowDefinition",
         "mmState": "clean"
     },
     "Delivery__c.workflow": {
