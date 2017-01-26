@@ -1,10 +1,11 @@
 # Delivery Management - Custom Force.com App
+<!--
 Deploy to Salesforce directly
 <a href="https://githubsfdeploy.herokuapp.com?owner=kashiahmed&repo=DeliveryManagementApp">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
-
+-->
 <p>The is simple force.com app to capture Delivery Confirmation. It contains 3 objects i.e.  Route > Deliver > Delivery Item. Delivery Confirmation Visual Force Page is the front end for a Driver to record delivery confirmation and get customer signature.
 </p>
 <p>   <img alt="Delivery Management SF1 Ready"
