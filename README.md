@@ -17,9 +17,10 @@ When driver complete the delivery, he or she can get customer eSignature, take i
 The app automatically geo tag the location on the record to verify the item was delivered to the same customer address. <br/> <br/>
 A Process is defined via Process Builder to update Delivery Status to DELIVERED once all the delivery items are DELIVERED. <br/><br/>
 </p>
-<p>  <a href="https://youtu.be/5VG7BYHSsBw"> Delivery Managemnt App Demo Video <img alt="Delivery Management App Demo Video"
-       src="https://i.ytimg.com/vi/5VG7BYHSsBw/1.jpg?time=1485447270443"> </p> </a>
- <p>
+<p align="center>>  <a href="https://youtu.be/5VG7BYHSsBw"> Delivery Managemnt App Demo Video <br/> 
+            <img alt="Delivery Management App Demo Video"
+       src="https://i.ytimg.com/vi/5VG7BYHSsBw/1.jpg?time=1485447270443"> </a>
+ </p>
 
 
 <p>
