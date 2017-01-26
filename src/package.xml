@@ -27,6 +27,11 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Delivery_Mgmt_Dashboards</members>
+        <members>Delivery_Mgmt_Dashboards/Delivery_Management_Dashboard</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
         <members>Delivery_Managment</members>
         <members>Delivery_Managment/Delivery_Management_App_Logo.png</members>
         <name>Document</name>
@@ -34,6 +39,12 @@
     <types>
         <members>*</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>Delivery_Mgmt_Reports</members>
+        <members>Delivery_Mgmt_Reports/Delivery_by_Driver_Report</members>
+        <members>Delivery_Mgmt_Reports/Route_with_Deliveries</members>
+        <name>Report</name>
     </types>
     <types>
         <members>*</members>
