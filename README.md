@@ -18,7 +18,8 @@ The app automatically geo tag the location on the record to verify the item was 
 A Process is defined via Process Builder to update Delivery Status to DELIVERED once all the delivery items are DELIVERED. <br/><br/>
 </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5VG7BYHSsBw" frameborder="0" allowfullscreen></iframe>
+[!Delivery Management App Demo (https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/embed/5VG7BYHSsBw)
+
 
 <p>
 (c) Developed by Kashi <a href="http://kashiahmed.com"> kashiahmed.com </a>
