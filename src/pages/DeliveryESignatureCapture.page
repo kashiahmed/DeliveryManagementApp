@@ -1,0 +1,165 @@
+<apex:page docType="html-5.0" showHeader="true" sidebar="true" standardStylesheets="false" extensions="deliveryExtension" standardController="Delivery_Item__c" > 
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style=" background-color: rgb(244, 246, 249) !important;">    
+        
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+            
+            
+            <apex:includeScript value="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"/>
+            <script src="{!URLFOR($Resource.SSESignatureCapture, '/thomasjbradley-signature-pad-9489484/build/jquery.signaturepad.min.js')}"></script>
+            <script src="{!URLFOR($Resource.SSESignatureCapture, '/thomasjbradley-signature-pad-9489484/build/json2.min.js')}"></script>
+            
+            <apex:remoteObjects >
+                <apex:remoteObjectModel name="Delivery_Item__c" jsShorthand="DrObj"  fields="Name,Signature_Printed__c,Id,Delivery_Item_Status__c,Signature_Date__c,Signature__c,Customer_Comments__c,R_D_Coordinates__Latitude__s,R_D_Coordinates__Longitude__s">
+                </apex:remoteObjectModel>
+            </apex:remoteObjects>  
+            
+            <script>
+            var longitude;
+            var latitude; 
+            navigator.geolocation.getCurrentPosition(function(position) {  
+                longitude = position.coords.longitude;  
+                latitude = position.coords.latitude;
+            });
+            
+            var RId='{!$CurrentPage.Parameters.id}';
+            
+            
+            function isLightningExperienceOrSalesforce1() {
+                return((typeof sforce != 'undefined') && sforce && (!!sforce.one));
+            }
+            
+            
+            
+            
+            function CustomNavigate(url){
+                
+                if( isLightningExperienceOrSalesforce1() ) {
+                    sforce.one.navigateToSObject(url);
+                }
+                else {
+                    // Use classic Visualforce
+                    window.location.href = '/'+url;
+                }
+            }
+            
+            function cancel(){
+                
+                CustomNavigate(RId);
+            }
+            
+            
+            $j = jQuery.noConflict();
+            
+            $j(document).ready(function() {
+                
+                console.log('Document is Ready');
+                $j('.sigPad').signaturePad({drawOnly: true, validateFields: true, defaultAction: 'drawIt', lineTop: 100, linMargin: 30, penColour:'#000000'});
+                
+                $j('#submit').click(function(){
+                    
+                    console.log('Save This Signature '+RId);
+                    //update Loc
+                    
+                    
+                    window.setTimeout(4000); // 5 seconds
+                    var rawSignature = $j('.output').val();
+                    var printedName = $j('#name').val();
+                    
+                    deliveryExtension.saveSignature('Delivery_Item__c', RId, 'Signature_Printed__c', printedName, 'Signature__c', rawSignature,longitude ,latitude,function(result, event){
+                        if(event.status) {
+                            console.log('Success');
+                           CustomNavigate(RId);
+                        } else {
+                            
+                        }
+                    });         
+                    
+                });
+                
+                
+            });
+            
+            
+            
+            
+            
+            </script>
+            <style>
+                
+                .slds-modal__container {
+                
+                min-width: 300px !important;
+                
+                padding: 20px 0 !important;
+                
+                left: -5px !important;
+                }
+                canvas {
+                border: 1px solid #CCC;
+                }
+            </style>
+        </head>
+        <div class="slds" >
+            <div class="slds-form">
+                
+                
+                <div class="slds-modal__container" style="padding-top: 2px !important;">
+                    <div class="slds-modal__header" style="{!if($User.UIThemeDisplayed == 'Theme4t' || $User.UIThemeDisplayed == 'Theme4d','display:none;padding-top:3px;','')} ">
+                        <h2 class="slds-text-heading--medium">Get Signature</h2>
+                        <button type="button" onclick="switch_modal(false);" class="slds-button slds-button--icon-inverse slds-modal__close">
+                            <i class="ion ion-close-round" style="font-size:2rem;" ></i>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    </div>
+                    
+                    
+                    
+                    
+                    <apex:form styleClass="sigPad">
+                        <div class="slds-modal__content">
+                            <div class="slds-text-longform">
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="sample1">Print your name</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" name="name" id="name" class="slds-input"  placeholder="Your Name"  require="true"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="sample2">Sign your Name</label>
+                                    
+                                    <div class="sig sigWrapper">
+                                        <div class="typed"></div>
+                                        <canvas class="pad" width="270" height="120"></canvas>
+                                        <input type="hidden" name="output" class="output" />
+                                    </div>                        
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="slds-modal__footer">
+                            <center>
+                                <input type="button" value="Submit" id="submit" class="slds-button slds-button--brand slds-button--small"  /> 
+                                <input type="button" value="Clear" id="clear" class="clearButton slds-button slds-button--brand slds-button--small "/> 
+                                
+                                <button type="button" onclick="cancel();"  class="slds-button slds-button--neutral slds-button--brand slds-button--small">Cancel</button>
+                                
+                            </center>
+                        </div>
+                    </apex:form>
+                </div>
+                
+                
+                
+            </div>
+            
+        </div>
+    </html>
+</apex:page>

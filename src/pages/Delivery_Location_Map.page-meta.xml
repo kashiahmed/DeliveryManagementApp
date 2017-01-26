@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>36.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>This inline VF Page  displays the maps for delivery items location based on R_D_Coordinates captured during the delivery</description>
+    <label>Delivery Location Map</label>
+</ApexPage>

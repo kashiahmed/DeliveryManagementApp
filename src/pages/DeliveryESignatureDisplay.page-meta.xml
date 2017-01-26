@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>26.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>VFPage to display captured eSignature for DeliveryItem. using Signature Component Demo VF Component 
+Part or Delivery Management Package</description>
+    <label>Delivery ESignature Display</label>
+</ApexPage>

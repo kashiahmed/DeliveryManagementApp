@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>36.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>VFPage to capture canvas to capture eSignature for Delivery Item Page. using Signature Component Demo VF Component 
+Part or Delivery Management Package</description>
+    <label>Delivery ESignature Capture</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>12</minorNumber>
+        <namespace>sf_chttr_apps</namespace>
+    </packageVersions>
+</ApexPage>

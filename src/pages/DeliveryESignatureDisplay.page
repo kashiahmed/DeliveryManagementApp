@@ -1,0 +1,6 @@
+<apex:page standardController="Delivery_Item__c">
+    <center>
+    <!-- KA- calling "Signature Component" Pacakge VF Demo Component to display captured delivery item eSign -->
+        <c:SSESignatureRegenerate objId="{!Delivery_Item__c.Id}" objAPIName="Delivery_Item__c" PrintedFieldAPIName="Signature_Printed__c" SignatureFieldAPIName="Signature__c"/>
+    </center>
+</apex:page>

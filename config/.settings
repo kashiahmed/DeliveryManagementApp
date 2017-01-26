@@ -1,0 +1,24 @@
+{
+    "projectName": "Delivery management",
+    "username": "admin@deliverymgmt.dev",
+    "id": "fbf54d90-e3d7-11e6-a745-a9b480510cbb",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://na35.salesforce.com",
+    "workspace": "C:\\Users\\faisal\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AppMenu",
+        "CustomApplication",
+        "CustomObject",
+        "CustomTab",
+        "Document",
+        "Flow",
+        "StaticResource",
+        "Workflow"
+    ]
+}

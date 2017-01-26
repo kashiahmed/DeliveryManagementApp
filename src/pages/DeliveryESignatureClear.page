@@ -1,0 +1,41 @@
+<apex:page standardController="Delivery_Item__c" sidebar="true" showHeader="true"  >
+<apex:remoteObjects >
+  <apex:remoteObjectModel name="Delivery_Item__c" fields="Id,Signature_Printed__c,Signature__c,R_D_Coordinates__Latitude__s,R_D_Coordinates__Longitude__s" />
+</apex:remoteObjects>
+   <script>  
+        function isLightningExperienceOrSalesforce1() {
+                return((typeof sforce != 'undefined') && sforce && (!!sforce.one));
+            }
+            
+            function CustomNavigate(url){
+            
+                if( isLightningExperienceOrSalesforce1() ) {
+                    sforce.one.navigateToSObject(url);
+                }
+                else {
+                    // Use classic Visualforce
+                    window.location.href = '/'+url;
+                }
+            }
+
+function clearSign(){
+    var rId= '{!$CurrentPage.Parameters.id}';
+     
+   var obj = new SObjectModel.Delivery_Item__c({
+  Id: rId,
+  R_D_Coordinates__Latitude__s: '',
+  R_D_Coordinates__Longitude__s:'',
+  Signature__c:'',
+  Signature_Printed__c:'',
+  Customer_Comments__c:'',
+    Signature_Date__c:''     
+});
+obj.update(); 
+    CustomNavigate(rId);
+ 
+ }  
+
+clearSign();
+
+</script>
+</apex:page>
