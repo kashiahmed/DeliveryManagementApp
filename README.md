@@ -5,7 +5,7 @@ Deploy to Salesforce directly
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
 
-<p>The is simple Route > Deliver > Delivery Item Management App. Delivery Confirmation Page is the front end for end user to record delivery confirmation
+<p>The is simple force.com app to capture Delivery Confirmation. It contains 3 objects i.e.  Route > Deliver > Delivery Item. Delivery Confirmation Visual Force Page is the front end for a Driver to record delivery confirmation and get customer signature.
 </p>
 <p>   <img alt="Delivery Management SF1 Ready"
        src="https://raw.githubusercontent.com/kashiahmed/DeliveryManagementApp/master/img/dm_sf1-phone.png"> </p>
