@@ -10,7 +10,7 @@ Deploy to Salesforce directly
 <p>   <img alt="Delivery Management SF1 Ready"
        src="https://raw.githubusercontent.com/kashiahmed/DeliveryManagementApp/master/img/dm_sf1-phone.png"> </p>
  <p>
- <h2>This app demonstrate the following features: <h2/> <br/>
+ <h2>This app demonstrate the following features: </h2> <br/>
 One VF Page for Drivers i.e. Delivery Confirmation (Note: Please make sure to Add Delivery Confirmation VF Page to Salesforce 1 Navigation via Setup > Administer > Salesforce1 Navigation)  <br/> <br/>
 Delivery Confirmation page shows dynamic dependent picklist to view Daily Routes and based on the route it display available OPEN Deliveries > Once delivery is selected it shows all the OPEN delivery Items for a customer <br/><br/>
 When driver complete the delivery, he or she can get customer eSignature, take item picture and save the record <br/><br/>
