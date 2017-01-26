@@ -23,6 +23,10 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>Delivery_Managment</members>
         <members>Delivery_Managment/Delivery_Management_App_Logo.png</members>
         <name>Document</name>
