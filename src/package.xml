@@ -41,6 +41,12 @@
         <name>Flow</name>
     </types>
     <types>
+        <members>Delivery_Item__c.Get_Signature</members>
+        <members>Delivery__c.New_Delivery_Item</members>
+        <members>Route__c.New_Delivery</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
         <members>Delivery_Mgmt_Reports</members>
         <members>Delivery_Mgmt_Reports/Delivery_by_Driver_Report</members>
         <members>Delivery_Mgmt_Reports/Route_with_Deliveries</members>
@@ -49,12 +55,6 @@
     <types>
         <members>*</members>
         <name>StaticResource</name>
-    </types>
-    <types>
-        <members>Delivery_Item__c</members>
-        <members>Delivery__c</members>
-        <members>Route__c</members>
-        <name>Workflow</name>
     </types>
     <version>36.0</version>
 </Package>

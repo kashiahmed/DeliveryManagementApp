@@ -14,11 +14,13 @@
         "ApexTrigger",
         "AppMenu",
         "CustomApplication",
+        "CustomApplicationComponent",
         "CustomObject",
         "CustomTab",
         "Dashboard",
         "Document",
         "Flow",
+        "QuickAction",
         "Report",
         "StaticResource",
         "Workflow"
