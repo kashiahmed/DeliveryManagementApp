@@ -9,7 +9,7 @@ public with sharing class DeliveryGoogleMapController {
     
     public DeliveryGoogleMapController(ApexPages.StandardController controller) {
         // Todo - Update the API key to yours
-        googleAPIKey = 'AIzaSyC3uqiChvEgU3XGx_VvKz0JugP-qKZX5ww';
+        googleAPIKey = '<enter your key here>';
         
         try {
             ls = (Delivery_Item__c)controller.getRecord();
